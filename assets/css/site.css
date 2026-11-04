@@ -66,6 +66,8 @@ a:hover { color: var(--accent); }
   padding: 4px 12px; cursor: pointer;
 }
 .lang:hover { border-color: var(--ink-2); }
+.lang > span { display: inline-flex; align-items: center; gap: 7px; }
+.flag { width: 20px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 
 /* Hero */
 .hero { padding: 96px 0 72px; }
