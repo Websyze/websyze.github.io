@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libre-apps</title>
+<meta name="description" content="Free and open source apps that deliver real value, built with care, with no ads and no unnecessary data collection.">
+<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121412" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="libre-apps">
+<meta property="og:description" content="Free and open source apps that deliver real value, built with care, with no ads and no unnecessary data collection.">
+<meta property="og:url" content="https://libre-apps.org/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://libre-apps.org/">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css?v=1">
+<script>
+  // Pick the language before the first paint: saved choice, then ?lang=, then the browser.
+  (function () {
+    var lang = null;
+    try { lang = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+    if (!lang) { try { lang = localStorage.getItem("lang"); } catch (e) {} }
+    if (!lang) { lang = (navigator.language || "en").toLowerCase().indexOf("pt") === 0 ? "pt" : "en"; }
+    if (lang !== "pt") { lang = "en"; }
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : "en");
+  })();
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="brand" href="#" aria-label="libre-apps">
+      <img src="assets/img/mark.svg" alt="" width="28" height="28">
+      <span>libre-apps</span>
+    </a>
+    <nav class="top__nav">
+      <a href="#projects"><span lang="en">Projects</span><span lang="pt">Projetos</span></a>
+      <a href="#people"><span lang="en">People</span><span lang="pt">Pessoas</span></a>
+      <a href="https://github.com/libre-apps-org" target="_blank" rel="noopener">GitHub</a>
+      <button class="lang" type="button" id="lang-toggle" aria-label="Switch language">
+        <span lang="en">PT</span><span lang="pt">EN</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">libre-apps.org</p>
+    <h1>
+      <span lang="en">Free apps that are worth using.</span>
+      <span lang="pt">Apps livres que valem a pena usar.</span>
+    </h1>
+    <p class="lead" lang="en">We build open source apps that solve a real problem and do it well. No ads, no account you do not need, no data collected just because it can be.</p>
+    <p class="lead" lang="pt">Fazemos apps de código aberto que resolvem um problema de verdade, e resolvem bem. Sem publicidade, sem conta que você não precisa e sem coletar dado só porque dá.</p>
+  </div>
+</section>
+
+<section class="principles" aria-label="Principles">
+  <div class="wrap">
+    <ul class="grid grid--4">
+      <li class="principle">
+        <h2><span lang="en">Real value</span><span lang="pt">Valor de verdade</span></h2>
+        <p lang="en">Every app starts from a need someone actually has.</p>
+        <p lang="pt">Todo app nasce de uma necessidade que alguém tem de fato.</p>
+      </li>
+      <li class="principle">
+        <h2><span lang="en">Quality</span><span lang="pt">Qualidade</span></h2>
+        <p lang="en">Tested, documented and cared for long after the first release.</p>
+        <p lang="pt">Testado, documentado e cuidado muito depois da primeira versão.</p>
+      </li>
+      <li class="principle">
+        <h2><span lang="en">Respect</span><span lang="pt">Respeito</span></h2>
+        <p lang="en">No ads, no tracking, and only the data the app needs to work.</p>
+        <p lang="pt">Sem anúncio, sem rastreamento e só o dado que o app precisa para funcionar.</p>
+      </li>
+      <li class="principle">
+        <h2><span lang="en">AI friendly</span><span lang="pt">Amigos da IA</span></h2>
+        <p lang="en">We use AI openly to build free and open technology, faster and better.</p>
+        <p lang="pt">Usamos IA abertamente para construir tecnologia livre e gratuita, mais rápido e melhor.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="en">Projects</span><span lang="pt">Projetos</span></p>
+    <h2 class="section__title">
+      <span lang="en">What we maintain</span>
+      <span lang="pt">O que mantemos</span>
+    </h2>
+
+    <ul class="grid grid--3 projects">
+      <li class="project">
+        <img class="project__icon" src="assets/img/openemux.png" alt="" width="56" height="56">
+        <h3>OpenEmux</h3>
+        <p class="project__tags">Linux · Android</p>
+        <p lang="en">A retro game library inspired by OpenEmu. Point it at your ROMs and get covers, per console settings and RetroArch under the hood.</p>
+        <p lang="pt">Uma biblioteca de jogos retrô inspirada no OpenEmu. Aponte para as suas ROMs e ganhe capas, ajustes por console e o RetroArch por baixo.</p>
+        <p class="project__links">
+          <a href="https://guilhermefeitosa66.github.io/OpenEmux/" target="_blank" rel="noopener">Site</a>
+          <a href="https://github.com/guilhermefeitosa66/OpenEmux" target="_blank" rel="noopener"><span lang="en">Source</span><span lang="pt">Código</span></a>
+        </p>
+      </li>
+      <li class="project">
+        <img class="project__icon" src="assets/img/open-tuner.svg" alt="" width="56" height="56">
+        <h3>OpenTuner</h3>
+        <p class="project__tags">Android</p>
+        <p lang="en">A simple tuner for ukulele, guitar, bass and their cousins. No ads, no tracking, no account, no internet.</p>
+        <p lang="pt">Um afinador simples para ukulele, violão, baixo e parentes. Sem anúncio, sem rastreamento, sem conta e sem internet.</p>
+        <p class="project__links">
+          <a href="https://guilhermefeitosa66.github.io/open-tuner/" target="_blank" rel="noopener">Site</a>
+          <a href="https://github.com/guilhermefeitosa66/open-tuner" target="_blank" rel="noopener"><span lang="en">Source</span><span lang="pt">Código</span></a>
+        </p>
+      </li>
+      <li class="project">
+        <img class="project__icon" src="assets/img/slap-mobile.svg" alt="" width="56" height="56">
+        <h3>SLAP Mobile</h3>
+        <p class="project__tags">Android</p>
+        <p lang="en">Asset inventory that works with no internet and no server. Every phone holds the whole inventory and syncs with the others over the local Wi-Fi.</p>
+        <p lang="pt">Inventário patrimonial que funciona sem internet e sem servidor. Cada celular carrega o inventário inteiro e sincroniza com os outros pelo Wi-Fi local.</p>
+        <p class="project__links">
+          <a href="https://guilhermefeitosa66.github.io/slap-mobile/" target="_blank" rel="noopener">Site</a>
+          <a href="https://github.com/guilhermefeitosa66/slap-mobile" target="_blank" rel="noopener"><span lang="en">Source</span><span lang="pt">Código</span></a>
+        </p>
+      </li>
+    </ul>
+
+    <p class="note" lang="en">These projects keep their own repositories. New apps start here, inside the <a href="https://github.com/libre-apps-org" target="_blank" rel="noopener">libre-apps-org</a> organization.</p>
+    <p class="note" lang="pt">Esses projetos seguem nos repositórios deles. Os próximos apps já nascem aqui, dentro da organização <a href="https://github.com/libre-apps-org" target="_blank" rel="noopener">libre-apps-org</a>.</p>
+  </div>
+</section>
+
+<section id="people" class="section section--alt">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="en">People</span><span lang="pt">Pessoas</span></p>
+    <h2 class="section__title">
+      <span lang="en">Who is behind it</span>
+      <span lang="pt">Quem está por trás</span>
+    </h2>
+    <div class="person">
+      <img class="person__photo" src="assets/img/guilherme.jpg" alt="Guilherme Feitoza" width="112" height="112" loading="lazy">
+      <div>
+        <h3 class="person__name">
+          <a href="https://guilhermefeitosa66.github.io/profile/" target="_blank" rel="noopener">Guilherme Feitoza</a>
+        </h3>
+        <p class="person__role"><span lang="en">Founder and maintainer</span><span lang="pt">Fundador e mantenedor</span></p>
+        <p lang="en">Software engineer for over a decade, working across web, mobile and desktop. Builds and maintains every app listed here.</p>
+        <p lang="pt">Engenheiro de software há mais de uma década, entre web, mobile e desktop. Cria e mantém todos os apps desta página.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>© <span id="year">2026</span> libre-apps.org</p>
+    <p lang="en">This page has no cookies, no trackers and no third party requests.</p>
+    <p lang="pt">Esta página não tem cookies, rastreadores nem requisições a terceiros.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lang-toggle").addEventListener("click", function () {
+    var root = document.documentElement;
+    var next = root.getAttribute("data-lang") === "pt" ? "en" : "pt";
+    root.setAttribute("data-lang", next);
+    root.setAttribute("lang", next === "pt" ? "pt-BR" : "en");
+    try { localStorage.setItem("lang", next); } catch (e) {}
+  });
+</script>
+</body>
+</html>
