@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>libre-apps</title>
 <meta name="description" content="Free and open source apps that deliver real value, built with care, with no ads and no unnecessary data collection.">
-<meta name="theme-color" content="#f7eedf" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1e1612" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7eedf">
 <meta property="og:title" content="libre-apps">
 <meta property="og:description" content="Free and open source apps that deliver real value, built with care, with no ads and no unnecessary data collection.">
 <meta property="og:url" content="https://libre-apps.org/">
@@ -15,7 +14,7 @@
 <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=5">
 <script>
   // Pick the language before the first paint: saved choice, then ?lang=, then the browser.
   (function () {
@@ -26,6 +25,10 @@
     if (lang !== "pt") { lang = "en"; }
     document.documentElement.setAttribute("data-lang", lang);
     document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : "en");
+    // Light is the default; dark only when the visitor picked it.
+    var theme = null;
+    try { theme = localStorage.getItem("theme"); } catch (e) {}
+    if (theme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }
   })();
 </script>
 </head>
@@ -41,6 +44,10 @@
       <a href="#projects"><span lang="en">Projects</span><span lang="pt">Projetos</span></a>
       <a href="#people"><span lang="en">People</span><span lang="pt">Pessoas</span></a>
       <a href="https://github.com/libre-apps-org" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme" type="button" id="theme-toggle" aria-label="Dark theme" title="Tema escuro / Dark theme">
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" fill="currentColor"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>
+      </button>
       <button class="lang" type="button" id="lang-toggle" aria-label="Switch language">
         <span lang="en" title="Ver em português">
           <svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#009c3b"/><path d="M14 2.4 25.6 10 14 17.6 2.4 10z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.6" fill="#002776"/><path d="M9.6 9.1c3-.6 6.3-.1 8.8 1.5" stroke="#fff" stroke-width=".8" fill="none"/></svg>PT
@@ -173,6 +180,24 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    function sync() {
+      var dark = root.getAttribute("data-theme") === "dark";
+      btn.setAttribute("aria-label", dark ? "Light theme" : "Dark theme");
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      meta.setAttribute("content", dark ? "#1e1612" : "#f7eedf");
+    }
+    btn.addEventListener("click", function () {
+      var dark = root.getAttribute("data-theme") !== "dark";
+      if (dark) { root.setAttribute("data-theme", "dark"); } else { root.removeAttribute("data-theme"); }
+      try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
+      sync();
+    });
+    sync();
+  })();
   document.getElementById("lang-toggle").addEventListener("click", function () {
     var root = document.documentElement;
     var next = root.getAttribute("data-lang") === "pt" ? "en" : "pt";
